@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import astronautImage from "~/assets/astronaut.png";
-import flowwiseHero from "~/assets/flowwise-hero-2.jpeg";
+import flowwiseHero from "~/assets/flowwise-hero.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import GitHubCorner from "./github-corner.astro";
@@ -34,13 +34,19 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       id="flowwise"
       class="w-3/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
-      <Image
-        class="h-full w-full object-cover"
+    <!-- <img src={flowwiseHero.src} 
+      class="object-scale-down" 
+      alt="A control tower in space"
+      height="780px"
+    /> -->
+      <Image    
+        class="object-contain"    
         src={flowwiseHero}
+        height="780px"
         widths={widths}
         sizes={sizes}
         loading="eager"
-        alt="A floating astronaut in a space suit"
+        alt="A control tower in space"
       />
     </div>
   </div>
